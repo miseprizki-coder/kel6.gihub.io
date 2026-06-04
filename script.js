@@ -185,3 +185,17 @@ function collectPresentationData() {
 generatePresentationButton.addEventListener("click", function () {
     collectPresentationData();
 });
+
+// Script untuk mengatur tampilan saat desain dipilih
+document.getElementById('btn-template-elegan').onclick = function() { pilihTemplate('Monokrom Elegan'); };
+document.getElementById('btn-template-biru').onclick = function() { pilihTemplate('Biru Akademik'); };
+document.getElementById('btn-template-kreatif').onclick = function() { pilihTemplate('Kreatif Modern'); };
+
+function pilihTemplate(nama) {
+    // Tampilkan form pengisian materi
+    document.getElementById('form-input-section').style.display = 'block';
+    // Update teks nama template yang dipilih
+    document.getElementById('nama-template-terpilih').innerText = nama;
+    // Scroll layar otomatis ke form
+    document.getElementById('form-input-section').scrollIntoView({ behavior: 'smooth' });
+}

@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator Presentasi PowerPoint</title>
     
-    <!-- Tambahan Baru: Menghubungkan file CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Container Utama -->
     <main id="main-container" class="main-container">
 
-        <!-- Header -->
         <header id="page-header" class="page-header">
             <h1 id="main-title" class="main-title">
                 Generator Presentasi PowerPoint
@@ -23,37 +20,35 @@
             </p>
         </header>
 
-        <!-- Section Pilihan Jenjang -->
-        <section id="education-level-section" class="education-level-section">
-            <h2 class="section-title">Pilih Jenjang</h2>
+        <section id="cover-section" class="slides-section">
+            <h2 class="section-title">Data Halaman Sampul (Cover)</h2>
+            
+            <article class="slide-card" style="border-left: 4px solid #1E293B;">
+                <div class="form-group">
+                    <label for="cover-title" class="input-label">Judul Materi Keseluruhan</label>
+                    <input type="text" id="cover-title" class="slide-title-input" placeholder="Contoh: Pancasila Sebagai Ideologi Negara">
+                </div>
 
-            <div id="education-level-container" class="education-level-container">
-                <label for="education-level" class="input-label">
-                    Jenjang Pendidikan
-                </label>
+                <div class="form-group">
+                    <label for="cover-course" class="input-label">Mata Kuliah / Dosen Pengampu</label>
+                    <input type="text" id="cover-course" class="slide-title-input" placeholder="Contoh: Pendidikan Kewarganegaraan / Bpk. Budi">
+                </div>
 
-                <select id="education-level" class="education-level-select" name="education_level">
-                    <option value="">-- Pilih Jenjang --</option>
-                    <option value="smp">SMP</option>
-                    <option value="sma">SMA</option>
-                    <option value="kuliah">Kuliah</option>
-                    <option value="pekerjaan">Pekerjaan</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label for="cover-members" class="input-label">Nama Kelompok & Anggota</label>
+                    <textarea id="cover-members" class="slide-content-textarea" rows="4" placeholder="Contoh:&#10;Kelompok 6:&#10;1. Andi&#10;2. Budi"></textarea>
+                </div>
+            </article>
         </section>
 
-        <!-- Section Input Materi -->
         <section id="slides-section" class="slides-section">
             <h2 class="section-title">Input Materi Presentasi</h2>
 
-            <!-- Container Semua Slide -->
             <div id="slides-container" class="slides-container">
 
-                <!-- Slide 1 -->
                 <article id="slide-1" class="slide-card">
                     <h3 class="slide-title">Slide 1</h3>
 
-                    <!-- Input Judul Materi -->
                     <div class="form-group">
                         <label for="slide-title-1" class="input-label">
                             Judul Materi
@@ -67,7 +62,6 @@
                         >
                     </div>
 
-                    <!-- Input Isi Materi -->
                     <div class="form-group">
                         <label for="slide-content-1" class="input-label">
                             Isi Materi
@@ -84,7 +78,6 @@
 
             </div>
 
-            <!-- Tombol Tambah Halaman -->
             <div id="add-slide-button-container" class="add-slide-button-container">
                 <button
                     type="button"
@@ -96,7 +89,6 @@
             </div>
         </section>
 
-        <!-- Section Generate Presentasi -->
         <section id="generate-presentation-section" class="generate-presentation-section">
             <button
                 type="submit"
@@ -108,11 +100,10 @@
         </section>
 
     </main>
-    <!-- Tambahkan 2 baris ini untuk memanggil PptxGenJS -->
+    
     <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/libs/jszip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
-   
-    <!-- Tambahan Baru: Menghubungkan file JavaScript -->
+    
     <script src="script.js"></script>
 </body>
 </html>

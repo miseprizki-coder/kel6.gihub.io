@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator Presentasi PowerPoint</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,95 +11,96 @@
     <main id="main-container" class="main-container">
 
         <header id="page-header" class="page-header">
-            <h1 id="main-title" class="main-title">
-                Generator Presentasi PowerPoint
-            </h1>
-            <p id="main-description" class="main-description">
-                Buat media pembelajaran presentasi secara otomatis dengan mudah
-            </p>
+            <h1 id="main-title" class="main-title">Generator Presentasi PowerPoint</h1>
+            <p id="main-description" class="main-description">Pilih desain dan isi materi secara terstruktur</p>
         </header>
 
-        <section id="cover-section" class="slides-section">
-            <h2 class="section-title">Data Halaman Sampul (Cover)</h2>
+        <section id="template-selection-section" class="slides-section">
+            <h2 class="section-title" style="text-align: center;">1. Pilih Desain Presentasi Kamu</h2>
             
-            <article class="slide-card" style="border-left: 4px solid #1E293B;">
-                <div class="form-group">
-                    <label for="cover-title" class="input-label">Judul Materi Keseluruhan</label>
-                    <input type="text" id="cover-title" class="slide-title-input" placeholder="Contoh: Pancasila Sebagai Ideologi Negara">
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+                <div class="template-card" id="btn-template-elegan" style="border: 2px solid #ccc; padding: 10px; border-radius: 10px; cursor: pointer; text-align: center; width: 30%;">
+                    <div style="background: #111827; height: 100px; border-radius: 5px; margin-bottom: 10px;"></div>
+                    <h3 style="font-size: 1rem;">Monokrom Elegan</h3>
                 </div>
 
-                <div class="form-group">
-                    <label for="cover-course" class="input-label">Mata Kuliah / Dosen Pengampu</label>
-                    <input type="text" id="cover-course" class="slide-title-input" placeholder="Contoh: Pendidikan Kewarganegaraan / Bpk. Budi">
+                <div class="template-card" id="btn-template-biru" style="border: 2px solid #ccc; padding: 10px; border-radius: 10px; cursor: pointer; text-align: center; width: 30%;">
+                    <div style="background: #0369A1; height: 100px; border-radius: 5px; margin-bottom: 10px;"></div>
+                    <h3 style="font-size: 1rem;">Biru Akademik</h3>
                 </div>
 
-                <div class="form-group">
-                    <label for="cover-members" class="input-label">Nama Kelompok & Anggota</label>
-                    <textarea id="cover-members" class="slide-content-textarea" rows="4" placeholder="Contoh:&#10;Kelompok 6:&#10;1. Andi&#10;2. Budi"></textarea>
+                <div class="template-card" id="btn-template-kreatif" style="border: 2px solid #ccc; padding: 10px; border-radius: 10px; cursor: pointer; text-align: center; width: 30%;">
+                    <div style="background: #F59E0B; height: 100px; border-radius: 5px; margin-bottom: 10px;"></div>
+                    <h3 style="font-size: 1rem;">Kreatif Modern</h3>
                 </div>
-            </article>
+            </div>
         </section>
 
-        <section id="slides-section" class="slides-section">
-            <h2 class="section-title">Input Materi Presentasi</h2>
-
+        <section id="form-input-section" class="slides-section" style="display: none; margin-top: 40px;">
+            <h2 class="section-title" style="text-align: center;">2. Isi Materi Presentasi</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Template terpilih: <span id="nama-template-terpilih" style="font-weight: bold; color: #2563EB;">Belum dipilih</span></p>
+            
             <div id="slides-container" class="slides-container">
-
-                <article id="slide-1" class="slide-card">
-                    <h3 class="slide-title">Slide 1</h3>
-
+                
+                <article class="slide-card" style="border-left: 4px solid #1E293B;">
+                    <h3 class="slide-title">Halaman 1: Cover Presentasi</h3>
                     <div class="form-group">
-                        <label for="slide-title-1" class="input-label">
-                            Judul Materi
-                        </label>
-                        <input 
-                            type="text"
-                            id="slide-title-1"
-                            class="slide-title-input"
-                            name="slide_title_1"
-                            placeholder="Masukkan judul materi"
-                        >
+                        <label class="input-label">Judul Materi Keseluruhan</label>
+                        <input type="text" id="cover-title" class="slide-title-input">
                     </div>
-
                     <div class="form-group">
-                        <label for="slide-content-1" class="input-label">
-                            Isi Materi
-                        </label>
-                        <textarea
-                            id="slide-content-1"
-                            class="slide-content-textarea"
-                            name="slide_content_1"
-                            rows="6"
-                            placeholder="Masukkan isi materi"
-                        ></textarea>
+                        <label class="input-label">Nama Kelompok</label>
+                        <input type="text" id="cover-group" class="slide-title-input" placeholder="Contoh: Kelompok 6">
                     </div>
                 </article>
 
+                <article class="slide-card" style="border-left: 4px solid #0369A1;">
+                    <h3 class="slide-title">Halaman 2: Daftar Anggota</h3>
+                    <div class="form-group">
+                        <label class="input-label">Runtutan Nama Anggota</label>
+                        <textarea id="cover-members" class="slide-content-textarea" rows="4"></textarea>
+                    </div>
+                </article>
+
+                <article class="slide-card" style="border-left: 4px solid #F59E0B;">
+                    <h3 class="slide-title">Halaman 3: Pembuka Kegiatan Belajar 1</h3>
+                    <div class="form-group">
+                        <label class="input-label">Judul Kegiatan Belajar 1</label>
+                        <input type="text" id="kb1-title" class="slide-title-input" placeholder="Contoh: KB 1 - Manajemen Pemasaran">
+                    </div>
+                </article>
+
+                <article class="slide-card">
+                    <h3 class="slide-title">Halaman 4: Materi KB 1 (Bagian 1)</h3>
+                    <div class="form-group">
+                        <label class="input-label">Subjudul Materi</label>
+                        <input type="text" class="slide-title-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label">Isi Pembahasan</label>
+                        <textarea class="slide-content-textarea" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label">Tambahkan Gambar (Opsional)</label>
+                        <input type="file" accept="image/*" class="slide-image-input" style="border: none; padding: 0;">
+                    </div>
+                </article>
+
+                <p style="text-align: center; color: #888; font-style: italic; margin-top: 20px;">
+                    (Halaman materi selanjutnya akan di-generate otomatis oleh sistem)
+                </p>
+
             </div>
 
-            <div id="add-slide-button-container" class="add-slide-button-container">
-                <button
-                    type="button"
-                    id="add-slide-button"
-                    class="add-slide-button"
-                >
-                    Tambah Halaman
+            <div style="margin-top: 30px;">
+                <button type="submit" id="generate-presentation-button" class="generate-presentation-button" style="width: 100%;">
+                    Buat File PowerPoint
                 </button>
             </div>
         </section>
 
-        <section id="generate-presentation-section" class="generate-presentation-section">
-            <button
-                type="submit"
-                id="generate-presentation-button"
-                class="generate-presentation-button"
-            >
-                Buat Presentasi
-            </button>
-        </section>
-
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/libs/jszip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
     
